@@ -1,11 +1,31 @@
 package Sorting;
 
-/**
- * SelectionSort
- */
+import java.util.Arrays;
+
 public class SelectionSort {
+
+
+    private static void sort(int[] arr){
+        int n=arr.length;
+        for (int i = 0; i <= n-2; i++) {
+            int min=i;
+
+            for (int j = i; j <= n-1; j++) {
+                if (arr[j]<arr[min]) {
+                    min=j;
+                }
+            }
+            // Swap the found minimum element with the first element
+            int temp=arr[min];
+            arr[min]=arr[i];
+            arr[i]=temp;
+        }
+        System.out.println(Arrays.toString(arr));
+    }
+
     public static void main(String[] args) {
-        System.out.println("khushal ");
+        int[] arr={4,3,2,6,7};
+        sort(arr);
     }
     
 }
