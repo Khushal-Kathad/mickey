@@ -2,6 +2,7 @@ import java.util.Arrays;
 
 public class InsertionSort {
    
+    // Time Complexity : Worst and Avg Case O(n^2) | Best Case O(n)
    
    private static void sort(int[] arr){
         int n=arr.length;
