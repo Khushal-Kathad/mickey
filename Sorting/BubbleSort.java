@@ -4,6 +4,9 @@ import java.util.Arrays;
 
 public class BubbleSort {
 
+
+    // Time Complexity : Worst Case O(n^2) | Best Case O(n)
+
     private static void sort(int[] arr){
         int n=arr.length;
 
