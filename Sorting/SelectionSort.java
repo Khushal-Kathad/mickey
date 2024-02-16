@@ -4,7 +4,9 @@ import java.util.Arrays;
 
 public class SelectionSort {
 
-
+    // Time Complexity : O(n^2) for Best Average and Worst case
+    // Space Complexity : O(1)
+    
     private static void sort(int[] arr){
         int n=arr.length;
         for (int i = 0; i <= n-2; i++) {
