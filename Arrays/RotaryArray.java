@@ -1,6 +1,29 @@
 package Arrays;
 
 public class RotaryArray {
+
+    public static void reverse(int[] arr,int start,int end){
+        while (start<=end) {
+            int temp=arr[start];
+            arr[start]=arr[end];
+            arr[end]=temp;
+            start++;
+            end--;
+        }
+    }
+
+
+    public static void rotateOptimal(int[] nums,int k,int n){
+        reverse(nums, 0, n-k-1);
+        reverse(nums, n-k, n-1);
+        reverse(nums, 0, n-1);
+
+        for (int i : nums) {
+            System.out.print(i + " ");
+        }
+
+    }
+
     public static void rotate(int[] nums, int k) {
         int n=nums.length;
         k=k%n;
@@ -25,10 +48,12 @@ public class RotaryArray {
     public static void main(String[] args) {
         int k=3;
         int[] arr = { 1, 2, 3, 4, 5, 6, 7 };
-        rotate(arr, k);
+        // rotate(arr, k);
         
-        for (int i : arr) {
-            System.out.print(i+" ");
-        }
+        // for (int i : arr) {
+        //     System.out.print(i+" ");
+        // }
+
+        rotateOptimal(arr, k, 7);
     }
 }
